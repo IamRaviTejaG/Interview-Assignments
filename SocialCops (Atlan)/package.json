@@ -1,0 +1,53 @@
+{
+  "name": "sc-nodejs-task",
+  "version": "1.0.0",
+  "description": "JSON Patching & Image thumbnail generation microservice.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "coverage": "nyc --reporter=text mocha --require @babel/register --timeout 5000 --exit",
+    "linter": "standard --fix",
+    "start": "npm run build && node dist/index.js --no-deprecation",
+    "start-docker": "cd scripts && chmod 777 dockerize.sh && ./dockerize.sh && cd ..",
+    "stop-docker": "docker-compose down",
+    "test": "mocha --require @babel/register --timeout 5000 --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IamRaviTejaG/SocialCops-Backend-Node.js-Task.git"
+  },
+  "author": "Ravi Teja Gannavarapu",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.4",
+    "body-parser": "^1.18.3",
+    "documentation": "^9.1.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "fast-json-patch": "^2.0.7",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.11",
+    "morgan": "^1.9.1",
+    "sharp": "^0.21.3",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "rimraf": "^2.6.3",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  }
+}

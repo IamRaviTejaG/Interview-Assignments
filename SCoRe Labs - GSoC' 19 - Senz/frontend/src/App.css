@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #2c2c2c;
+  font-family: Lato;
+}
+
+button {
+  /* background-color: #a2a2a2; */
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  height: 50px;
+  margin: 20% 0% 0% 0%;
+  font-family: Lato;
+  font-size: 150%;
+  box-shadow: white;
+  width: 500px;
+}
+
+button:hover {
+  background-color: rgb(97, 252, 97);
+  transition: 0.6s;
+}
+
+p {
+  font-size: 120%;
+}
+
+#filename {
+  color: white;
+}
+
+#done {
+  display: inline-block;
+  visibility: hidden;
+  height: 20px;
+}
+
+#loading {
+  display: inline-block;
+  visibility: hidden;
+  height: 20px;
+}
+
+#uploadStatus {
+  margin-right: 10px;
+}

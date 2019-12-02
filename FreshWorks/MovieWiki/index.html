@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MovieWiki - Your movie search ends here!</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="./js/script.js"></script>
+    </head>
+    <body>
+        <div id="mainDiv">
+            <h1><a href="./index.html">MovieWiki</a></h1>
+            <div class="inputAndSearch">
+                <input id="searchBar"
+                    placeholder="Type in keywords and press enter to search..."
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Type in keywords and press enter to search...'"
+                    onkeydown="triggerSearch(event)"
+                />
+            </div>
+            <button class="btns" id="showFavs" onClick="renderFavorites()">Show Favorites</button>
+            <div id="result"></div>
+            <button class="btns" id="showMore" onclick="checkAndShowMore()">Show more</button>
+            <button class="btns" id="favBtn">Add to Favorites</button>
+            <div class="verticalSpaceThirty"></div>
+            <button class="btns" id="clearBtn" onclick="clearFavorites()">Clear favorites</button>
+            <button class="btns" id="backBtn" onclick="retrieveState()">Back</button>
+        </div>
+    </body>
+</html>

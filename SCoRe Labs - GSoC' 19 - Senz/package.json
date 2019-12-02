@@ -1,0 +1,39 @@
+{
+  "name": "senz-task",
+  "version": "1.0.0",
+  "description": "Senz Task for GSoC 2019",
+  "main": "app.js",
+  "scripts": {
+    "build": "rimraf dist/ && babel . --ignore frontend,node_modules,test,.babelrc,package.json,npm-debug.log --out-dir dist/ --copy-files",
+    "linter": "standard --fix",
+    "start": "npm run build && node dist/app.js",
+    "test": "mocha --require @babel/register --exit"
+  },
+  "author": "Ravi Teja Gannavarapu <grt4004@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "@babel/runtime": "^7.4.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "openpgp": "^4.4.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "rimraf": "^2.6.3",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "ignore": "frontend"
+  }
+}
