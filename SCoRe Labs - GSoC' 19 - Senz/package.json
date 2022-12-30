@@ -27,7 +27,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/register": "^7.0.0",
     "chai": "^4.2.0",
-    "mocha": "^6.0.2",
+    "mocha": "^10.2.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "rimraf": "^2.6.3",
